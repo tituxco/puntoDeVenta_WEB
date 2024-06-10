@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const asientosController_1 = require("../controladores/asientosController");
+const rutasAsientos = (0, express_1.Router)();
+rutasAsientos.get("/obtenerPorId/:id", asientosController_1.obtenerPorId);
+rutasAsientos.get("/obtenerPorCodigo/:codigoAsiento", asientosController_1.obtenerPorCodigo);
+rutasAsientos.get("/obtenerTodo", asientosController_1.obtenerTodo);
+rutasAsientos.post("/crear", asientosController_1.crear);
+rutasAsientos.delete("/eliminarPorId/:id", asientosController_1.eliminarPorId);
+rutasAsientos.delete("/eliminarPorCodigo/:codigoAsiento", asientosController_1.eliminarPorCodigo);
+exports.default = rutasAsientos;

@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const clientesController_1 = require("../controladores/clientesController");
+const rutasClientes = (0, express_1.Router)();
+rutasClientes.get("/obtenerPorId/:idclientes", clientesController_1.obtenerPorId);
+rutasClientes.get("/obtenerPorCodigo/:codClie", clientesController_1.obtenerPorCodigo);
+rutasClientes.get("/obtenerTodo", clientesController_1.obtenerTodo);
+rutasClientes.get("/busqueda/:parametro", clientesController_1.busquedaGeneral);
+rutasClientes.get("/busquedaLocalidad/:dir_localidad", clientesController_1.busquedaLocalidad);
+rutasClientes.get("/busquedaFecha", clientesController_1.busquedaFecha);
+rutasClientes.post("/crear", clientesController_1.crear);
+rutasClientes.put("/modificar", clientesController_1.modificar);
+rutasClientes.delete("/eliminarPorId/:idclientes", clientesController_1.eliminarPorId);
+rutasClientes.delete("/eliminarPorCodigo/:codClie", clientesController_1.eliminarPorCodigo);
+exports.default = rutasClientes;
