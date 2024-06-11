@@ -190,7 +190,7 @@ const eliminarPorId = (req, res, next) => __awaiter(void 0, void 0, void 0, func
             yield cliente.destroy();
             res
                 .status(200)
-                .json({ message: "Cliente contable eliminado", datos: idclientes });
+                .json({ message: "Cliente eliminado", datos: idclientes });
         }
     }
     catch (error) {

@@ -10,6 +10,8 @@ const config_1 = require("./db/config");
 const asientosRutas_1 = __importDefault(require("./rutas/asientosRutas"));
 const clientesRutas_1 = __importDefault(require("./rutas/clientesRutas"));
 const localidadesRutas_1 = __importDefault(require("./rutas/localidadesRutas"));
+const confFiscalRutas_1 = __importDefault(require("./rutas/confFiscalRutas"));
+const tipoContribuyenteRutas_1 = __importDefault(require("./rutas/tipoContribuyenteRutas"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 app.use((0, body_parser_1.json)());
@@ -20,6 +22,10 @@ app.use("/asientosContables", asientosRutas_1.default);
 app.use("/clientes", clientesRutas_1.default);
 //rutas de localidades
 app.use("/localidades", localidadesRutas_1.default);
+//rutas conffiscal
+app.use("/confFiscal", confFiscalRutas_1.default);
+//tipo contribuyente
+app.use("/tipoContribuyente", tipoContribuyenteRutas_1.default);
 config_1.connection.sync().then(() => {
     console.log("base de datos sincronizada correctamente");
 }).catch((err) => {

@@ -5,6 +5,8 @@ import { connection } from "./db/config";
 import rutasAsientos from "./rutas/asientosRutas";
 import rutasClientes from "./rutas/clientesRutas";
 import rutasLocalidades from "./rutas/localidadesRutas";
+import rutasConfFiscal from "./rutas/confFiscalRutas";
+import rutasTipoContribuyente from "./rutas/tipoContribuyenteRutas";
 dotenv.config();
 
 
@@ -17,7 +19,10 @@ app.use("/asientosContables",rutasAsientos)
 app.use("/clientes",rutasClientes)
 //rutas de localidades
 app.use ("/localidades",rutasLocalidades)
-
+//rutas conffiscal
+app.use("/confFiscal",rutasConfFiscal)
+//tipo contribuyente
+app.use("/tipoContribuyente",rutasTipoContribuyente)
 
 
 connection.sync().then(()=>{

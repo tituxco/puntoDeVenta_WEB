@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const tipoContribuyenteController_1 = require("../controladores/tipoContribuyenteController");
+const rutasTipoContribuyente = (0, express_1.Router)();
+rutasTipoContribuyente.get("/obtenerPorId/:id", tipoContribuyenteController_1.obtenerPorId);
+rutasTipoContribuyente.get("/obtenerTodo", tipoContribuyenteController_1.obtenerTodo);
+rutasTipoContribuyente.post("/crear", tipoContribuyenteController_1.crear);
+rutasTipoContribuyente.delete("/eliminarPorId/:id", tipoContribuyenteController_1.eliminarPorId);
+rutasTipoContribuyente.put("/modificar", tipoContribuyenteController_1.modificar);
+exports.default = rutasTipoContribuyente;

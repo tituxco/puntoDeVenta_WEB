@@ -10,6 +10,8 @@ const dotenv_1 = __importDefault(require("dotenv"));
 const asientosModelo_1 = require("../modelos/asientosModelo");
 const clientesModelo_1 = require("../modelos/clientesModelo");
 const localidadesModelo_1 = require("../modelos/localidadesModelo");
+const confFiscalModelo_1 = require("../modelos/confFiscalModelo");
+const tipoContribuyenteModelo_1 = require("../modelos/tipoContribuyenteModelo");
 dotenv_1.default.config();
 exports.connection = new sequelize_typescript_1.Sequelize({
     dialect: "mysql",
@@ -18,5 +20,5 @@ exports.connection = new sequelize_typescript_1.Sequelize({
     password: process.env.MYSQL_PASSWORD,
     database: process.env.MYSQL_DB_NAME,
     logging: false,
-    models: [asientosModelo_1.AsientoContable, clientesModelo_1.Clientes, localidadesModelo_1.Localidades]
+    models: [asientosModelo_1.AsientoContable, clientesModelo_1.Clientes, localidadesModelo_1.Localidades, confFiscalModelo_1.ConfFiscal, tipoContribuyenteModelo_1.TipoContribuyente],
 });
