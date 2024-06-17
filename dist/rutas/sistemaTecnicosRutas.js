@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const sistemaTecnicosController_1 = require("../controladores/sistemaTecnicosController");
+const rutasSistemaTecnicos = (0, express_1.Router)();
+rutasSistemaTecnicos.post("/crear", sistemaTecnicosController_1.crear);
+rutasSistemaTecnicos.put("/modificar", sistemaTecnicosController_1.modificar);
+rutasSistemaTecnicos.get("/obtenerPorId/:id", sistemaTecnicosController_1.obtenerPorId);
+rutasSistemaTecnicos.get("/obtenerTodo", sistemaTecnicosController_1.obtenerTodo);
+rutasSistemaTecnicos.delete("/eliminarPorId/:id", sistemaTecnicosController_1.eliminarPorId);
+exports.default = rutasSistemaTecnicos;
