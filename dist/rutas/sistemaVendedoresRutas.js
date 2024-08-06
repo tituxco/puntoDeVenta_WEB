@@ -7,5 +7,5 @@ rutasSistemaVendedores.post("/crear", sistemaVendedoresController_1.crear);
 rutasSistemaVendedores.put("/modificar", sistemaVendedoresController_1.modificar);
 rutasSistemaVendedores.get("/obtenerPorId/:id", sistemaVendedoresController_1.obtenerPorId);
 rutasSistemaVendedores.get("/obtenerTodo", sistemaVendedoresController_1.obtenerTodo);
-rutasSistemaVendedores.delete("/eliminarPorId", sistemaVendedoresController_1.eliminarPorId);
+rutasSistemaVendedores.delete("/eliminarPorId/:id", sistemaVendedoresController_1.eliminarPorId);
 exports.default = rutasSistemaVendedores;
